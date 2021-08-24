@@ -1,0 +1,19 @@
+phrase = input(" Write a short sentence please: "'\n')
+import collections
+
+def count_letters(*sen): 
+    retour = collections.Counter(*sen)
+    print()
+    print("This is a dictionary of characters frequencies "'\n\n',(retour))
+
+    #the following lines are extra features added
+    print()
+    total_chars = sum(retour.values())
+    print(f"this is number of characters in phrase: ",(total_chars))
+    reverse_look = phrase[::-1]
+    print()
+    print(" I reversed it"'\n\n',(reverse_look))
+    print()
+    print(" lets upper them all"'\n',list(map(str.upper, *sen)))
+    
+count_letters(phrase)
