@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/karil/sql-assign2.sqlite3" readonly="0" foreign_keys="0" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="0" synchronous="1"/><attached><db schema="chinook" path="C:\sqlite\db\chinook.db"/></attached><window><main_tabs open="pragmas structure query browser" current="2"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="261"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/><expanded_item id="4" parent="1"/></tab_structure><tab_browse><current_table name="7,6:chinookalbums"/><default_encoding codec=""/><browse_table_settings><table schema="chinook" name="albums" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="61"/><column index="2" value="300"/><column index="3" value="59"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">select albums.ArtistId,albums.AlbumId,albums.Title,count(tracks.TrackId) as song_tracks 
+from albums,tracks
+where tracks.TrackId = albums.AlbumId
+group by albums.ArtistId
+order by song_tracks desc
+
+
+
+select albums.Title,tracks.TrackId,tracks.Name
+from albums
+JOIN tracks 
+on albums.AlbumId = tracks.TrackId
+order by albums.AlbumId
+
+select albums.Title,albums.AlbumId,min(tracks.milliseconds)as shortest_song
+from albums
+join tracks
+on albums.albumId=tracks.albumId
+group by tracks.TrackId
+order by shortest_song desc;
+
+
+select tracks.TrackId,albums.Title,sum(tracks.milliseconds) as length 
+from tracks
+join albums
+on tracks.AlbumId = albums.AlbumId
+group by tracks.TrackId 
+order by length desc
+
+
+
+select tracks.TrackId,albums.Title,sum(tracks.milliseconds) as length 
+from tracks
+join albums
+on tracks.AlbumId = albums.AlbumId
+where tracks.milliseconds &gt; 70000
+group by tracks.TrackId 
+order by length </sql><current_tab id="0"/></tab_sql></sqlb_project>
