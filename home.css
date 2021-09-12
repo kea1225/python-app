@@ -1,0 +1,41 @@
+.wholething{
+    border-left: 10px solid lightyellow;
+    
+    
+}
+.blue-div {
+    width:950px;
+    height:100px;
+    background-color: blue;
+    padding-left: 80px;
+    border: 1px solid red;
+    
+}
+
+.zhh {
+    border: 1px solid white; padding: 25px;
+    margin: 25px 10px 25px 20px;
+    border-radius: 10px;
+}   
+
+.tob {
+    border: 1px solid white; padding: 25px;
+    margin: 25px 10px 25px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.nypd {
+    border: 1px solid white; padding: 25px;
+    margin: 25px 10px 25px 20px;
+    border-radius: 10px;
+}
+
+.lastAnchor{
+width: 1100;
+background-color: green;
+padding: 10px;
+border: 1px solid black;
+box-sizing: border-box;
+ 
+}
