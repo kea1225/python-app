@@ -4,13 +4,23 @@
     
 }
 .blue-div {
-    width:950px;
+    width:1100px;
     height:100px;
     background-color: blue;
     padding-left: 80px;
     border: 1px solid red;
     
 }
+
+.mypicture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    }
+
+.edsect {
+    text-align: center;
+    }
 
 .zhh {
     border: 1px solid white; padding: 25px;
@@ -32,7 +42,7 @@
 }
 
 .lastAnchor{
-width: 1100;
+width: 1200;
 background-color: green;
 padding: 10px;
 border: 1px solid black;
